@@ -1,6 +1,6 @@
 using BenchmarkTools
 using Printf
-using HelmoltzSolvers
+using ChebyshevTauHelmoltzSolver
 
 # odd sizes
 Ps = 9:2:199

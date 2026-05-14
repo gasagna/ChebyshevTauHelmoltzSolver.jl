@@ -1,4 +1,4 @@
-module HelmoltzSolvers
+module ChebyshevTauHelmoltzSolver
 
 using LoopVectorization
 using LinearAlgebra

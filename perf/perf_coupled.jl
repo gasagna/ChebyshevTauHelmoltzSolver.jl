@@ -1,4 +1,4 @@
-using HelmoltzSolvers
+using ChebyshevTauHelmoltzSolver
 using BenchmarkTools
 using FFTW
 
@@ -32,7 +32,7 @@ r[0] /= 2
 # create solver
 h = CoupledHelmoltzSolver(P)
 
-@btime HelmoltzSolvers._ddy($r, Val(:left))
+@btime ChebyshevTauHelmoltzSolver._ddy($r, Val(:left))
 
 # and update coefficients
 @btime solve!($h, (1, 2, 3, 4), $r)

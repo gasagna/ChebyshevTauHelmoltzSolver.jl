@@ -31,8 +31,8 @@ using Debugger
     f̂ = ChebCoeffs(FFTW.r2r(f.(y), FFTW.REDFT00)/P)
     f̂[0] /= 2
 
-    @test HelmoltzSolvers._ddy(f̂, Val(:left)) ≈ exp(-1)
-    @test HelmoltzSolvers._ddy(f̂, Val(:right)) ≈ exp( 1)
+    @test ChebyshevTauHelmoltzSolver._ddy(f̂, Val(:left)) ≈ exp(-1)
+    @test ChebyshevTauHelmoltzSolver._ddy(f̂, Val(:right)) ≈ exp( 1)
 
     # u .= 2.0 .* v
     # @test u[0] == 18

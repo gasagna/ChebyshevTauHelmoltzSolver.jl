@@ -1,4 +1,4 @@
-using HelmoltzSolvers
+using ChebyshevTauHelmoltzSolver
 using BenchmarkTools
 using LinearAlgebra
 using FFTW
